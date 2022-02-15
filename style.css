@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.control {
+    padding: 50px;
+}
+
+.section {
+    position: relative;
+    /*this is requireed to keep our moveable in this section*/
+    height: 260px;
+    background-color: coral;
+    overflow: hidden;
+}
+
+.moveable {
+    position: absolute;
+    vertical-align: top;
+    /*we need it to remove invisible margin-bottom*/
+    height: 200px;
+    width: 100%;
+}
+
+.moveable.left {
+    background-color: green;
+    transform: translateX(-100%);
+    transition: transform 250ms;
+}
+
+.moveable.right {
+    background-color: greenyellow;
+    transform: translateX(100%);
+    transition: transform 250ms;
+}
+
+.moveable.left.active {
+    transform: translateX(0);
+}
+
+.moveable.right.active {
+    transform: translateX(0);
+}
